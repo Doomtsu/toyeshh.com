@@ -213,6 +213,24 @@ const WorkProjectDetail = () => {
                     </MagneticButton>
                   </div>
                 ) : null}
+
+                {project.repoUrl ? (
+                  <div className="mt-4">
+                    <MagneticButton
+                      type="button"
+                      onClick={() =>
+                        window.open(
+                          project.repoUrl,
+                          "_blank",
+                          "noopener,noreferrer",
+                        )
+                      }
+                      className="px-6 py-3 rounded-lg border border-border text-foreground font-body text-sm font-medium tracking-wide hover:border-primary/40 transition-colors"
+                    >
+                      View source on GitHub
+                    </MagneticButton>
+                  </div>
+                ) : null}
               </section>
 
               <section className="rounded-[1.5rem] border border-border/70 bg-card/80 backdrop-blur-sm p-6 md:p-8">
